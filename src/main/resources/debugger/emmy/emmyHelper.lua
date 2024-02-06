@@ -116,7 +116,9 @@ end
 local toluaHelper = {
     ---@param variable Variable
     queryVariable = function(variable, obj, typeName, depth)
-        if typeName == 'table' then
+        if emmyProject.extension.queryVariable and emmyProject.extension.queryVariable(variable, obj, typeName, depth) then
+            return true
+        elseif typeName == 'table' then
             local cname = rawget(obj, '__cname')
             if cname then
                 variable:query(obj, depth)
@@ -168,7 +170,9 @@ local toluaHelper = {
 
 local xluaDebugger = {
     queryVariable = function(variable, obj, typeName, depth)
-        if typeName == 'userdata' then
+        if emmyProject.extension.queryVariable and emmyProject.extension.queryVariable(variable, obj, typeName, depth) then
+            return true
+        elseif typeName == 'userdata' then
             local mt = getmetatable(obj)
             if mt == nil then
                 return false
@@ -238,7 +242,9 @@ local xluaDebugger = {
 
 local cocosLuaDebugger = {
     queryVariable = function(variable, obj, typeName, depth)
-        if typeName == 'userdata' then
+        if emmyProject.extension.queryVariable and emmyProject.extension.queryVariable(variable, obj, typeName, depth) then
+            return true
+        elseif typeName == 'userdata' then
             local mt = getmetatable(obj)
             if mt == nil then return false end
             variable.valueTypeName = 'C++'

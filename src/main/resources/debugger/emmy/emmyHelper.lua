@@ -116,7 +116,8 @@ end
 local toluaHelper = {
     ---@param variable Variable
     queryVariable = function(variable, obj, typeName, depth)
-        if emmyProject.extension.queryVariable and emmyProject.extension.queryVariable(variable, obj, typeName, depth) then
+        if emmyProject and emmyProject.extension and emmyProject.extension.queryVariable
+            and emmyProject.extension.queryVariable(variable, obj, typeName, depth) then
             return true
         elseif typeName == 'table' then
             local cname = rawget(obj, '__cname')

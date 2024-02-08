@@ -11,6 +11,12 @@
 [![加入QQ群](https://img.shields.io/badge/chat-QQ(1)群-46BC99.svg?style=flat-square)](https://jq.qq.com/?_wv=1027&k=5Br83i5)
 [![加入QQ群](https://img.shields.io/badge/chat-QQ(2)群-46BC99.svg?style=flat-square)](https://jq.qq.com/?_wv=1027&k=5EeI0Sm)
 
+
+
+[![](https://img.shields.io/github/downloads/zhangjiequan/IntelliJ-EmmyLua/total?style=flat-square)](https://github.com/zhangjiequan/IntelliJ-EmmyLua/releases)
+[![](https://img.shields.io/github/downloads/zhangjiequan/IntelliJ-EmmyLua/latest/total?style=flat-square)](https://github.com/zhangjiequan/IntelliJ-EmmyLua/releases/latest)
+
+
 QQ交流群：1群：`29850775` 2群：`529914962`
 (最新版本以及部分视频演示在群文件中下载)
 

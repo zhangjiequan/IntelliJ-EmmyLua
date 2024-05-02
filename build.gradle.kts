@@ -66,8 +66,8 @@ val buildVersion = System.getProperty("IDEA_VER") ?: buildDataList.first().ideaS
 
 val buildVersionData = buildDataList.find { it.ideaSDKShortVersion == buildVersion }!!
 
-val emmyDebuggerVersion = "1.3.0"
-emmyDebuggerVersion = "1.7.1.3.extend_all_lua_types"
+// val emmyDebuggerVersion = "1.3.0"
+val emmyDebuggerVersion = "1.7.1.3.extend_all_lua_types"
 
 val resDir = "src/main/resources"
 

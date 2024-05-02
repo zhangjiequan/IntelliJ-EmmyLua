@@ -18,7 +18,7 @@ jobs:
 
     env:
       CI: true
-      CI_BUILD_VERSION: 1.4.0.${{ github.run_number }}
+      CI_BUILD_VERSION: 1.4.13.${{ github.run_number }}
 
     steps:
       - name: Checkout

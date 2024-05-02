@@ -67,6 +67,7 @@ val buildVersion = System.getProperty("IDEA_VER") ?: buildDataList.first().ideaS
 val buildVersionData = buildDataList.find { it.ideaSDKShortVersion == buildVersion }!!
 
 val emmyDebuggerVersion = "1.3.0"
+emmyDebuggerVersion = "1.7.1.3.extend_all_lua_types"
 
 val resDir = "src/main/resources"
 
@@ -101,11 +102,16 @@ fun getRev(): String {
 
 task("downloadEmmyDebugger", type = Download::class) {
     src(arrayOf(
-        "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/darwin-arm64.zip",
-        "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/darwin-x64.zip",
-        "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/linux-x64.zip",
-        "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/win32-x64.zip",
-        "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/win32-x86.zip"
+        // "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/darwin-arm64.zip",
+        // "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/darwin-x64.zip",
+        // "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/linux-x64.zip",
+        // "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/win32-x64.zip",
+        // "https://github.com/EmmyLua/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/win32-x86.zip"
+        "https://github.com/zhangjiequan/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/darwin-arm64.zip",
+        "https://github.com/zhangjiequan/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/darwin-x64.zip",
+        "https://github.com/zhangjiequan/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/linux-x64.zip",
+        "https://github.com/zhangjiequan/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/win32-x64.zip",
+        "https://github.com/zhangjiequan/EmmyLuaDebugger/releases/download/${emmyDebuggerVersion}/win32-x86.zip"
     ))
 
     dest("temp")
